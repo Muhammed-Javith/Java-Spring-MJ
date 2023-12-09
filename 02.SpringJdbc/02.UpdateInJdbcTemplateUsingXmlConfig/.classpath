@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/asm-9.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/log4j-core-2.22.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/spring-aop-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/spring-beans-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/spring-context-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/spring-core-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/spring-expression-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/spring-jdbc-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/spring/spring jdbc/spring-tx-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Practice/mysql-connector-j-8.0.33.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

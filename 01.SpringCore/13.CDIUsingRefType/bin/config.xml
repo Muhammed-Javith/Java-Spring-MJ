@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!-- Address Object -->
+	<!-- 
+		<bean class="com.app.core.Address" name="addrObj" 
+		c:addr="patna" />
+	-->
+<!-- Ref As Tag -->
+    <!-- 
+	    <bean class="com.app.core.Employee" name="empObj">
+		<constructor-arg><value>11</value></constructor-arg>
+		<constructor-arg><value>VickyRaj</value></constructor-arg>
+		<constructor-arg><ref bean = "addrObj"/></constructor-arg>
+		</bean>
+	-->
+<!-- Ref As Attribute -->
+	<!-- 
+		<bean class = "com.app.core.Employee" name = "empObj">
+		<constructor-arg value = "10"/><constructor-arg value = "VickyRaj"/>
+		<constructor-argref = "addrObj"/>
+		</bean>
+	-->
+<!--Ref As Using C-Schema / C:Name-Space -->
+	<!--
+		<bean class = "com.app.core.Employee" name = "empObj" 
+		c:empId = "10"
+		c:empName = "VickyRaj"
+		c:addr-ref = "addrObj"/>
+	-->
+<!-- Using Inner Bean -->
+		<bean class="com.app.core.Employee" name="empObj"
+			c:empId="12"
+			c:empName="Vicky raj">
+			<constructor-arg>
+				<bean class="com.app.core.Address" c:addr="patna"/>
+			</constructor-arg>
+		</bean>
+</beans>

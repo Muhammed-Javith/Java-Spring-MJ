@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- SAC Data List and Map -->
+	<util:list list-class="java.util.LinkedList" id="lstObj">
+		<value>10</value>
+		<value>20</value>
+	</util:list>
+	<util:map map-class="java.util.LinkedHashMap" id="mapObj">
+		<entry>
+			<key>
+				<value>10</value>
+			</key>
+			<value>AAA</value>
+		</entry>
+		<entry key="20" value="BBB" />
+	</util:map>
+	<!-- Store Collection Value Using SAC (Stand Alone Class) -->
+	<bean class="com.app.core.Address" name="addrObj">
+		<constructor-arg>
+			<value>10</value>
+		</constructor-arg>
+		<constructor-arg value="CCC" />
+		<constructor-arg>
+			<ref bean="lstObj" />
+		</constructor-arg>
+		<constructor-arg ref="mapObj" />
+	</bean>
+	<!-- Without SAC -->
+	<!-- 
+			<bean class="com.app.core.Address" name="addrObj"> 
+			<constructor-arg> <value>10</value> </constructor-arg>
+			<constructor-arg value="patna" /> <constructor-arg> 
+				<list> 
+					<value>10</value> 
+					<value>20</value> 
+					<value>30</value> 
+			   </list> 
+		  </constructor-arg> 
+			  <constructor-arg> 
+			  		<map> 
+			  		<entry> 
+			  			<key> <value>10</value>
+			  			</key> <value>AAA</value> 
+					</entry> 
+					<entry>
+						 <key> <value>20</value>
+						 </key> <value>BBB</value> 
+					</entry> 
+				</map> 
+			 </constructor-arg> 
+		 </bean>
+  -->
+	<!-- String Collection Data in Parameter Using SAC (Stand Alone Collection) -->
+	<!-- 
+			  <bean class = "com.app.core.Address" name = "addrObj" 
+			   c:empId = "10" 
+			   c:loc = "patna" 
+			   c:cords-ref = "lstObj" 
+			   c:details-ref = "mapObj" /> 
+	 -->
+</beans>

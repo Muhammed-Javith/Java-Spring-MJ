@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<context:component-scan base-package="com.app" />
+
+	<util:list list-class="java.util.LinkedList" id="lstObj">
+		<value>10</value>
+		<value>AAA</value>
+	</util:list>
+	<util:map map-class="java.util.LinkedHashMap " id="mapObj">
+		<entry>
+			<key>
+				<value>10</value>
+			</key>
+			<value>BBB</value>
+		</entry>
+	</util:map>
+	<util:properties id="propObj">
+		<prop key="20">CCC</prop>
+		<prop key="30">DDD</prop>
+	</util:properties>
+
+
+</beans>

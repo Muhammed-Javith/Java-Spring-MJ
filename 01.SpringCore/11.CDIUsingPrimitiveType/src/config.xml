@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- Value As Tag 
+	<bean class = "com.app.core.Employee" name = "empObj"> 
+		<constructor-arg> <value>10</value> </constructor-arg> 
+		<constructor-arg> <value>Vicky</value> </constructor-arg> 
+	</bean> 
+	-->
+	<!-- Value as attribute 
+	<bean class = "com.app.core.Employee" name = "empObj"> 
+		<constructor-arg value = "10"/> 
+		<constructor-arg value = "vickyraj"/>
+	 </bean> 
+	 -->
+	<!-- Value As C-Schema -->
+	<bean class = "com.app.core.Employee " name="empObj"
+		c:empId="10" c:empName="Vicky Raj" >
+	</bean>
+</beans>
